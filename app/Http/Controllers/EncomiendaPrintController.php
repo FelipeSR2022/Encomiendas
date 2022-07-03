@@ -72,7 +72,7 @@ class EncomiendaPrintController extends Controller
         $impresora->setJustification(Printer::JUSTIFY_LEFT);
         $impresora->text("Nombre: ");
         $impresora->text("{$encomienda->recluse->name_recluse} {$encomienda->recluse->surname_recluse} \n");
-        $impresora->text("Código de ecomienda: ");
+        $impresora->text("Código de encomienda: ");
         $impresora->text("{$encomienda->cod} \n");
         $impresora->feed(1);
         $impresora->setJustification(Printer::JUSTIFY_CENTER);
