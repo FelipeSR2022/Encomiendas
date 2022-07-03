@@ -27,9 +27,9 @@ class UserTableSeeder extends Seeder
 
         DB::table('users')->insert([
             'document'        =>'788757',
-            'names'           =>'camilo',
-            'lastnames'     =>'mancipe',
-            'email'           =>'mancipe@gmail.com',
+            'names'           =>'Felipe',
+            'lastnames'     =>'Suarez',
+            'email'           =>'Felipe@gmail.com',
             'password'        => Hash::make('12345678'),
             'rol'            =>'super-admin',
             'state'           =>'Activo',
