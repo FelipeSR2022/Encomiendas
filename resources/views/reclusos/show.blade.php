@@ -23,15 +23,15 @@
                         <div class="col-md-4">
                             <label for="inputTypeDocument" class="form-label">Tipo de Documento</label>
                             <select id="inputTypeDocument" class="form-select" name="inputTypeDocument" disabled>
-                            @if($Rc->idtypedocument=="TI")
+                            @if($Rc->type_document_id=="TI")
                               <option value="TI">TI</option>
                               <option value="CC">CC</option>
                               <option value="CE">CE</option>
-                              @elseif($Rc->idtypedocument=="CC")
+                              @elseif($Rc->type_document_id=="CC")
                               <option value="CC">CC</option>
                               <option value="CE">CE</option>
                               <option value="TI">TI</option>
-                              @elseif($Rc->idtypedocument=="CE")
+                              @elseif($Rc->type_document_id=="CE")
                               <option value="CE">CE</option>
                               <option value="TI">TI</option>
                               <option value="CC">CC</option>
@@ -44,21 +44,21 @@
                         </div>
                         <div class="col-md-6">
                           <label for="inputCodeRecluso" class="form-label">Código de Recluso</label>
-                          <input type="text" class="form-control" id="inputCodeRecluso" name="inputCodeRecluso" value="{{$Rc->coderecluse}}" readonly required>
+                          <input type="text" class="form-control" id="inputCodeRecluso" name="inputCodeRecluso" value="{{$Rc->code_recluse}}" readonly required>
                         </div>
                         <div class="col-md-6">
                           <label for="inputNames" class="form-label">Nombres de Recluso</label>
-                          <input type="text" class="form-control" id="inputNames" name="inputNames" value="{{$Rc->namerecluse}}" readonly required>
+                          <input type="text" class="form-control" id="inputNames" name="inputNames" value="{{$Rc->name_recluse}}" readonly required>
                         </div>
                         <div class="col-md-6">
                             <label for="inputSurName" class="form-label">Apellidos de Recluso</label>
-                            <input type="text" class="form-control" id="inputSurName" name="inputSurName" value="{{$Rc->surnamerecluse}}" readonly required>
+                            <input type="text" class="form-control" id="inputSurName" name="inputSurName" value="{{$Rc->surname_recluse}}" readonly required>
                           </div>
 
                           <div class="col-md-4">
                             <label for="inputPavilion" class="form-label">Pabellón</label>
                             <select id="inputPavilion" class="form-select" name="inputPavilion" disabled>
-                            @if($Rc->idpavilions=="Pabellón 1")
+                            @if($Rc->pavilions_id=="Pabellón 1")
                               <option value="Pabellón 1">Pabellón 1</option>
                               <option value="Pabellón 2">Pabellón 2</option>
                               <option value="Pabellón 3">Pabellón 3</option>
@@ -66,7 +66,7 @@
                               <option value="Pabellón 5">Pabellón 5</option>
                               <option value="Pabellón 6">Pabellón 6</option>
                               <option value="Pabellón 7">Pabellón 7</option>
-                            @elseif($Rc->idpavilions=="Pabellón 2")
+                            @elseif($Rc->pavilions_id=="Pabellón 2")
                               <option value="Pabellón 2">Pabellón 2</option>
                               <option value="Pabellón 3">Pabellón 3</option>
                               <option value="Pabellón 4">Pabellón 4</option>
@@ -74,7 +74,7 @@
                               <option value="Pabellón 6">Pabellón 6</option>
                               <option value="Pabellón 7">Pabellón 7</option>
                               <option value="Pabellón 1">Pabellón 1</option>
-                            @elseif($Rc->idpavilions=="Pabellón 3")
+                            @elseif($Rc->pavilions_id=="Pabellón 3")
                               <option value="Pabellón 3">Pabellón 3</option>
                               <option value="Pabellón 4">Pabellón 4</option>
                               <option value="Pabellón 5">Pabellón 5</option>
@@ -82,7 +82,7 @@
                               <option value="Pabellón 7">Pabellón 7</option>
                               <option value="Pabellón 1">Pabellón 1</option>
                               <option value="Pabellón 2">Pabellón 2</option>
-                            @elseif($Rc->idpavilions=="Pabellón 4")
+                            @elseif($Rc->pavilions_id=="Pabellón 4")
                               <option value="Pabellón 4">Pabellón 4</option>
                               <option value="Pabellón 5">Pabellón 5</option>
                               <option value="Pabellón 6">Pabellón 6</option>
@@ -90,7 +90,7 @@
                               <option value="Pabellón 1">Pabellón 1</option>
                               <option value="Pabellón 2">Pabellón 2</option>
                               <option value="Pabellón 3">Pabellón 3</option>
-                            @elseif($Rc->idpavilions=="Pabellón 5")
+                            @elseif($Rc->pavilions_id=="Pabellón 5")
                               <option value="Pabellón 5">Pabellón 5</option>
                               <option value="Pabellón 6">Pabellón 6</option>
                               <option value="Pabellón 7">Pabellón 7</option>
@@ -98,7 +98,7 @@
                               <option value="Pabellón 2">Pabellón 2</option>
                               <option value="Pabellón 3">Pabellón 3</option>
                               <option value="Pabellón 4">Pabellón 4</option>
-                            @elseif($Rc->idpavilions=="Pabellón 6")
+                            @elseif($Rc->pavilions_id=="Pabellón 6")
                               <option value="Pabellón 6">Pabellón 6</option>
                               <option value="Pabellón 7">Pabellón 7</option>
                               <option value="Pabellón 1">Pabellón 1</option>
@@ -106,7 +106,7 @@
                               <option value="Pabellón 3">Pabellón 3</option>
                               <option value="Pabellón 4">Pabellón 4</option>
                               <option value="Pabellón 5">Pabellón 5</option>
-                            @elseif($Rc->idpavilions=="Pabellón 7")
+                            @elseif($Rc->pavilions_id=="Pabellón 7")
                               <option value="Pabellón 7">Pabellón 7</option>
                               <option value="Pabellón 1">Pabellón 1</option>
                               <option value="Pabellón 2">Pabellón 2</option>
