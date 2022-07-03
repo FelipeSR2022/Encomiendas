@@ -60,10 +60,10 @@
                         <li class="nav-item">
                         <div class="dropdown">
                             <a id="Ec" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    Ecomiendas
+                                    Encomiendas
                             </a>
                             <div class="dropdown-menu" aria-labelledby="Ec">
-                                <a class="dropdown-item" href="{{route('ecomienda.create')}}">Recibir Ecomientas</a>
+                                <a class="dropdown-item" href="{{route('ecomienda.create')}}">Recibir Encomiendas</a>
                                 <a class="dropdown-item" href="{{route('ecomienda.index')}}">Listar</a>
                             </div>
                             </div>
