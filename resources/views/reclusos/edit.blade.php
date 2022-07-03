@@ -61,7 +61,7 @@
                             <label for="inputPavilion" class="form-label">Pabellón</label>
                             <select id="inputPavilion" class="form-select" name="inputPavilion">
                             @if($Rc->pavilions_id=="Pabellón 1")
-                              <option value="Pabellón 1">Pabelnló 1</option>
+                              <option value="Pabellón 1">Pabellón 1</option>
                               <option value="Pabellón 2">Pabellón 2</option>
                               <option value="Pabellón 3">Pabellón 3</option>
                               <option value="Pabellón 4">Pabellón 4</option>
