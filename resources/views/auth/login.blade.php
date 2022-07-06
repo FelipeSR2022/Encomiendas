@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card text-white bg-black shadow rounded">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">{{ __('Iniciar sesion') }}</div>
 
                 <div class="card-body bg-dark">
                     <form method="POST" action="{{ route('login') }}">
