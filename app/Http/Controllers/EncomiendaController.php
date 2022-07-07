@@ -92,19 +92,27 @@ class EncomiendaController extends Controller
 
 
     public function email($id){
-        $encomienda = Encomienda::with('recluse')->findOrFail($id);
-        $enco = [
-                 'td_recluse'       =>$encomienda->recluse->code_recluse,
-                 'cod'              =>$encomienda->cod,
-                 'accepted_objects' =>$encomienda->accepted_objects,
-                 'declined_objects' =>$encomienda->declined_objects,
-                 'declined_observations' =>$encomienda->declined_observations,
-                 'created_at'            =>$encomienda->created_at
+        try {
+            $encomienda = Encomienda::with('recluse')->findOrFail($id);
 
-                ];
-        Mail::to("$encomienda->email_send")->send(new MessageEncomienda($enco));
+            $enco = [
+                    'td_recluse'       =>$encomienda->recluse->code_recluse,
+                    'cod'              =>$encomienda->cod,
+                    'accepted_objects' =>$encomienda->accepted_objects,
+                    'declined_objects' =>$encomienda->declined_objects,
+                    'declined_observations' =>$encomienda->declined_observations,
+                    'created_at'            =>$encomienda->created_at
 
-    return redirect()->route('ecomienda.index');
+                    ];
+            Mail::to("$encomienda->email_send")->send(new MessageEncomienda($enco));
+
+                return redirect()->route('ecomienda.index');
+        } catch (\Exception $e) {
+
+                return redirect()->route('ecomienda.index')->with('error','No se ha podido enviar el correo, pero se ha impreso el sticker');
+           
+        }
+        
 
     }
 
