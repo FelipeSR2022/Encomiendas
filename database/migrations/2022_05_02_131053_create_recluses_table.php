@@ -15,15 +15,18 @@ class CreateReclusesTable extends Migration
     {
         Schema::create('recluses', function (Blueprint $table) {
             $table->id();
-            $table->string('type_document_id',10)->comment('tipo de documento');
+            $table->unsignedBigInteger('type_document_id');
+            $table->foreign('type_document_id')->references('id')->on('type_document');
             $table->string('document',30)->comment('documneto');
             $table->string('code_recluse',20)->comment('codigo del recluso');
             $table->string('Sex',10)->comment('Sexo');
             $table->string('name_recluse',100)->comment('Nombre del recluso');
             $table->string('surname_recluse',100)->comment('Apellidos');
-            $table->string('pavilions_id',30)->comment('pabellon');
-            $table->string('jailcells',30)->comment('celda');
+            $table->unsignedBigInteger('jailcells_id');
+            $table->foreign('jailcells_id')->references('id')->on('jailcells');;
             $table->string('state',10)->comment('Estado del recluso');
+            $table->unsignedBigInteger('pavilions_id');
+            $table->foreign('pavilions_id')->references('id')->on('pavilion');
             $table->unsignedBigInteger('user_create_id')->comment('Usuario que crea');
             $table->unsignedBigInteger('user_edit_id')->comment('Usuario que edita')->nullable();
             $table->foreign('user_create_id')->references('id')->on('users');
